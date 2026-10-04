@@ -1,4 +1,4 @@
-% Copyright (C) 2024-2025 Yucheng Liu. Under the AGPL 3.0 License.
+% Copyright (C) 2024-2026 Yucheng Liu. Under the AGPL 3.0 License.
 % AGPL 3.0 License: https://www.gnu.org/licenses/agpl-3.0.txt .
 
 % UST THESIS DOCUMENT CLASS -- version 2023.0 
@@ -1602,12 +1602,21 @@ scholarly research.}
   %   same page.
   \filbreak
   \textspace
+
+  % Edited by Yucheng Liu on Jun. 16, 2025.
+  % The reason for this edit is to add more space above the first \member invocation.
+  \vglue 2ex
+
   % \raisebox{-8pt}[0pt][17pt]{\rule{\maxmem}{.5pt}}\par	% Print line.
   % \raisebox{-8pt}[0pt][17pt]{\rule{5in}{.5pt}}\par	% Print line.
   \raisebox{-8pt}[0pt][17pt]{\rule{5in}{.5pt}}\par	% Print line.
   \raisebox{0pt}[0pt][0pt]{\expandafter{#1}}\par	% Print member name below.
   \textspaceundo
-  \vglue 6ex
+  
+  % Edited by Yucheng Liu on Jun. 16, 2025.
+  % The reason for this edit is to add more space above the first \member invocation.
+  \vglue 4ex
+
   \filbreak
 }
 
