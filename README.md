@@ -142,7 +142,7 @@ HKUST (GZ) thesis template, LYC's variant.
 ## Textual and Code Contents
 
 ```
-Copyright (C) 2024-2025 Yucheng Liu. Under the AGPL 3.0 License.
+Copyright (C) 2024-2026 Yucheng Liu. Under the AGPL 3.0 License.
 AGPL 3.0 License: https://www.gnu.org/licenses/agpl-3.0.txt .
 ```
 
@@ -151,7 +151,7 @@ AGPL 3.0 License: https://www.gnu.org/licenses/agpl-3.0.txt .
 ## Non-textual or Non-code Contents
 
 ```
-Copyright (C) 2024-2025 Yucheng Liu. Under the CC-BY-SA 4.0 License.
+Copyright (C) 2024-2026 Yucheng Liu. Under the CC-BY-SA 4.0 License.
 CC-BY-SA 4.0 License: https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt .
 ```
 
