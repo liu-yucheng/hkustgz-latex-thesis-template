@@ -4,12 +4,7 @@ HKUST (GZ) LaTeX thesis template, LYC's variant.
 
 ## LaTeX Usage
 
-### Upstream LaTeX Template
-
-- [@luckyfan-cs, Template-of-HKUST-GZ-Thesis](https://github.com/luckyfan-cs/Template-of-HKUST-GZ-Thesis)
-  - Permitted to use under the [MIT License](https://www.mit.edu/~amini/LICENSE.md).
-
-### VSCode Preparation
+### Preparation
 
 - Install and configure the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) VSCode plugin.
 - Add the following items to your VS Code `settings.json`.
@@ -133,10 +128,15 @@ HKUST (GZ) LaTeX thesis template, LYC's variant.
 }
 ```
 
-### LaTeX Compilation
+### Compilation
 
 - Go to the [thesis](./thesis/) folder.
 - Compile [thesis.tex](./thesis/thesis.tex) with the `xelatex, biblatex, xelatex, makeglossaries, xelatex * 2` compilation recipe.
+
+### Upstream Templates
+
+- [@luckyfan-cs, Template-of-HKUST-GZ-Thesis](https://github.com/luckyfan-cs/Template-of-HKUST-GZ-Thesis)
+  - Permitted to use under the [MIT License](https://www.mit.edu/~amini/LICENSE.md).
 
 ## Copyright
 
