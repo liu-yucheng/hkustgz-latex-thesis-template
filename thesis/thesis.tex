@@ -42,7 +42,7 @@
 \iffalse
 
 \setmainfont{times} [
-    Path = ../fonts/Times-New-Roman/ ,
+    Path = fonts/Times-New-Roman/ ,
     UprightFont = *.ttf ,
     BoldFont = *bd.ttf ,
     ItalicFont = *i.ttf ,
@@ -50,7 +50,7 @@
 ]
 
 \setsansfont{arial} [
-    Path = ../fonts/Arial/ ,
+    Path = fonts/Arial/ ,
     UprightFont = *.ttf ,
     BoldFont = *bd.ttf ,
     ItalicFont = *i.ttf ,
@@ -58,7 +58,7 @@
 ]
 
 \setmonofont{cour} [
-    Path = ../fonts/Courier-New/ ,
+    Path = fonts/Courier-New/ ,
     UprightFont = *.ttf ,
     BoldFont = *bd.ttf ,
     ItalicFont = *i.ttf ,
@@ -75,7 +75,7 @@
 \iftrue
 
 \setmainfont{cambria} [
-    Path = ../fonts/Cambria/ ,
+    Path = fonts/Cambria/ ,
     UprightFont = *.ttc ,
     BoldFont = *b.ttf ,
     ItalicFont = *i.ttf ,
@@ -83,7 +83,7 @@
 ]
 
 \setsansfont{calibri} [
-    Path = ../fonts/Calibri/ ,
+    Path = fonts/Calibri/ ,
     UprightFont = *.ttf ,
     BoldFont = *b.ttf ,
     ItalicFont = *i.ttf ,
@@ -91,7 +91,7 @@
 ]
 
 \setmonofont{cour} [
-    Path = ../fonts/Courier-New/ ,
+    Path = fonts/Courier-New/ ,
     UprightFont = *.ttf ,
     BoldFont = *bd.ttf ,
     ItalicFont = *i.ttf ,
@@ -107,18 +107,18 @@
 \iffalse
 
 \setmainfont{GoNotoCurrentSerif} [
-    Path = ../fonts/GoNotoCurrentSerif/ ,
+    Path = fonts/GoNotoCurrentSerif/ ,
     UprightFont = *.ttf
 ]
 
 \setsansfont{GoNotoCurrent} [
-    Path = ../fonts/GoNotoCurrent/ ,
+    Path = fonts/GoNotoCurrent/ ,
     UprightFont = *-Regular.ttf ,
     BoldFont = *-Bold.ttf
 ]
 
 \setmonofont{CascadiaMono} [
-    Path = ../fonts/Cascadia/ ,
+    Path = fonts/Cascadia/ ,
     UprightFont = *.ttf
 ]
 
@@ -226,13 +226,14 @@
 % Use packages.
 % Create glossaries.
 % \usepackage{glossaries}
-\usepackage[style=indexgroup]{glossaries-extra}
-\input{2_4_1_glossaries_definitions}
+\usepackage{import}
+\usepackage[automake, style=indexgroup]{glossaries-extra}
+\subimport{thesis/gls/}{defs.tex}
 
 % Preambles. DO NOT ERASE THEM.
 \title{Title} % Title of the thesis.
 \author{Your Name} % Author of the thesis.
-\degree{\MPhil} % Degree for which the thesis is. Options: \AM \MSc \MPhil \PhD .
+\degree{\PhD} % Degree for which the thesis is. Options: \AM \MSc \MPhil \PhD .
 \stage{\Thesis} % Stage of PhD document. Options: \PQE \Proposal \Thesis .
 \subject{Your Thrust} % Subject of the Degree.
 \department{Your Thrust} % Department to which the thesis is submitted.
@@ -258,21 +259,21 @@
 % Thesis Content. The order of output MUST be followed.
 % 0.0. TITLEPAGE.
 % The \maketitle command generates the Title page as well as the Signature page.
-\MakeTitleVersionTwo{0_6_abstract.tex}
+\MakeTitleVersionTwo{\subimport{thesis/}{abstract.tex}}
 
 % 0.1. DEDICATION (Optional).
 % The \dedication and \enddedication commands are optional.
 % If specified it generates a page for dedication.
 \dedication
 % This is an optional section.
-\input{0_1_dedication.tex}
+\subimport{thesis/}{dedication.tex}
 \enddedication
 \newpage
 
 % 0.2. ACKNOWLEDGMENTS.
 % \acknowledgments and \endacknowledgments defines the Acknowledgments of the author of the Thesis.
 \acknowledgments
-\input{0_2_acknowledgments.tex}
+\subimport{thesis/}{acks.tex}
 \endacknowledgments
 \newpage
 
@@ -291,7 +292,7 @@
 % 0.6. ABSTRACT
 % \abstract and \endabstract are used to define a short Abstract for the Thesis.
 % \abstract
-% \input{0_6_abstract.tex}
+% \subimport{thesis/}{abstract.tex}
 % \endabstract
 
 % 1. The Actual Contents
@@ -305,49 +306,49 @@
 % 1.1. Introduction.
 \chapter{Introduction}
 \label{ch_intro}
-\input{1_1_introduction.tex}
+\subimport{thesis/}{intro.tex}
 \newpage
 
 % 1.2. Guidelines (DO NOT include).
 % \chapter{Guidelines}
 % \label{ch_guidelines}
-% \input{1_2_guidelines.tex}
+% \subimport{thesis/}{guidelines.tex}
 % \newpage
 
 % 1.3. Literature Review.
 \chapter{Literature Review}
 \label{ch_review}
-\input{1_3_review.tex}
+\subimport{thesis/}{lit_review.tex}
 \newpage
 
 % 1.4. Methodologies.
 \chapter{Methodologies}
 \label{ch_methodologies}
-\input{1_4_methodologies.tex}
+\subimport{thesis/}{methods.tex}
 \newpage
 
 % 1.5. Experiments.
 \chapter{Experiments}
 \label{ch_experiments}
-\input{1_5_experiments.tex}
+\subimport{thesis/}{experiments.tex}
 \newpage
 
 % 1.6. Discussions.
 \chapter{Discussions}
 \label{ch_discussions}
-\input{1_6_discussions.tex}
+\subimport{thesis/}{discussions.tex}
 \newpage
 
 % 1.7. Limitations.
 \chapter{Limitations}
 \label{ch_limitations}
-\input{1_7_limitations.tex}
+\subimport{thesis/}{limitations.tex}
 \newpage
 
 % 1.8. Conclusions.
 \chapter{Conclusions}
 \label{ch_conclusions}
-\input{1_8_conclusions.tex}
+\subimport{thesis/}{conclusions.tex}
 \newpage
 
 % 2.1. REFERENCES.
@@ -366,7 +367,7 @@
 % If you are not using BibTeX to process your Bibliography, comment out the following line.
 \addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{IEEEtran}
-\bibliography{2_1_references.bib}
+\bibliography{thesis/refs.bib}
 \newpage
 
 % 2.2. APPENDICES (If Any)
@@ -375,7 +376,7 @@
 \appendix
 \chapter{Additional Materials}
 \label{ch_AdditionalMaterials}
-\input{2_2_AdditionalMaterials.tex}
+\subimport{thesis/}{additional_materials.tex}
 \newpage
 
 % 2.3. BIOGRAPHY (optional)
@@ -388,7 +389,7 @@
 % 2.4. GLOSSARIES (optional)
 \chapter{Glossaries}
 \label{ch_glossaries}
-\input{2_4_2_glossaries_texts.tex}
+\subimport{thesis/}{gls.tex}
 % \newpage
 
 \end{document}

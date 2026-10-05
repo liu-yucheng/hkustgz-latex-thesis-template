@@ -1991,7 +1991,7 @@ scholarly research.}
     \newpage
 % End of Page 1
 \abstract
-\input{#1}
+#1
 \endabstract
 % End of Page 2
 \ifThesis
