@@ -1,10 +1,18 @@
-# Template_HKUST-GZ_Thesis_Variant-LYC
+# hkustgz-latex-thesis-template
 
-HKUST (GZ) thesis template, LYC's variant.
+HKUST (GZ) LaTeX thesis template, LYC's variant.
 
-# Preparation (With VSCode - LaTeX Workshop)
+## LaTeX Usage
 
-- Integrate the following items into your VS Code `settings.json`.
+### Upstream LaTeX Template
+
+- [@luckyfan-cs, Template-of-HKUST-GZ-Thesis](https://github.com/luckyfan-cs/Template-of-HKUST-GZ-Thesis)
+  - Permitted to use under the [MIT License](https://www.mit.edu/~amini/LICENSE.md).
+
+### VSCode Preparation
+
+- Install and configure the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) VSCode plugin.
+- Add the following items to your VS Code `settings.json`.
 
 ```json
 {
@@ -125,21 +133,14 @@ HKUST (GZ) thesis template, LYC's variant.
 }
 ```
 
-- You can use the Command Palette (Ctrl+Shift+P) to access your `settings.json`.
-
-# Compilation
+### LaTeX Compilation
 
 - Go to the [thesis](./thesis/) folder.
-- Use the `xelatex, biblatex, xelatex, makeglossaries, xelatex * 2` compilation recipe.
-- Compile [0_0_thesis.tex](./thesis/0_0_thesis.tex).
+- Compile [thesis.tex](./thesis/thesis.tex) with the `xelatex, biblatex, xelatex, makeglossaries, xelatex * 2` compilation recipe.
 
-# References - TeX Template
+## Copyright
 
-- [@luckyfan-cs, Template-of-HKUST-GZ-Thesis](https://github.com/luckyfan-cs/Template-of-HKUST-GZ-Thesis)
-  - Permitted to use under the [MIT License](https://www.mit.edu/~amini/LICENSE.md).
-
-# Copyright
-## Textual and Code Contents
+### Textual and Code Contents
 
 ```
 Copyright (C) 2024-2026 Yucheng Liu. Under the AGPL 3.0 License.
@@ -148,7 +149,7 @@ AGPL 3.0 License: https://www.gnu.org/licenses/agpl-3.0.txt .
 
 - [The AGPL 3.0 License.](./license)
 
-## Non-textual or Non-code Contents
+### Non-textual or Non-code Contents
 
 ```
 Copyright (C) 2024-2026 Yucheng Liu. Under the CC-BY-SA 4.0 License.
